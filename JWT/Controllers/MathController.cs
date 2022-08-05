@@ -7,7 +7,7 @@ namespace JWT.Controllers
     [ApiController]
     public class MathController : Controller
     {
-        [HttpGet, Authorize]
+        [HttpGet, Authorize(Roles = "Admin")]
         public int Index()
         {
             Random rand = new Random();
